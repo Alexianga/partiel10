@@ -1,0 +1,187 @@
+/* main.css */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap');
+html{
+    scroll-behavior: smooth;
+}
+
+html{
+	font-family: 'CourierPrime';
+	font-size: 15px;  /* 1rem = 15px */ 
+
+	
+	
+	/*on peut écrire ceci en une seule ligne :
+	*/
+	background: url() no-repeat 50% 0 ;
+}
+body{
+	line-height: 1.5;
+	width: 90%;
+	max-width: 1000px;
+	margin: auto;
+}
+a{
+	color: black; /* copie la couleur du texte courant autour */
+	text-decoration: none;
+	text-align: right;
+	margin-right: auto;
+}
+
+
+header h1{
+	text-align: center;
+	font-size: 5rem;
+	color: black;
+	font-weight: bold;
+	margin: 30px 0 20px; /* 30px en haut, 0 sur les cotes et 20px en bas */
+}
+
+
+.box{
+	text-align: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	background: #fff;
+	padding: 10px;
+	margin-bottom: 10px;
+	box-shadow: 0 0 4px #000;
+
+}
+
+nav a{
+	margin: 0 20px; /* 0 en haut et bas; et 20px sur les côtés */
+}
+#slider{
+	position: relative;
+}
+
+#previous,
+#next{
+	background: none;
+	border: none;
+	display: block; /* change le type d'élément, (pour qu'on puisse lui fixer la taille) */
+	width: 43px; /* largeur */
+	height: 48px; /* hauteur */
+	padding: 0 0 0 43px; /* 0 partout, sauf à gauche */
+	overflow: hidden; /* tout ce qui dépasse des côtés est caché */
+	position: absolute;
+	top: calc(50% - 24px);
+
+}
+#previous{
+	background-image: url(../images/pointer-left.png);
+	left: 20px;
+	
+}
+#next{
+	background-image: url(../images/pointer-right.png);
+	right: 20px;
+}
+
+section{
+	
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+section article{
+	width: 24%;
+}
+
+figure, 
+p{
+	margin-bottom: 20px;
+}
+
+#slider figure,
+#slider p{
+
+	margin-bottom: 0;
+}
+
+p{
+	text-indent: 40px;
+}
+
+.plus{
+	text-align: right;
+	text-decoration: underline;
+	text-transform: lowercase;
+	margin-bottom: 10px;
+}
+
+div{
+	float: left;/* pour pouvoir mettre les textes à coté des images */
+	width: 24%; /* 24% du bloc qui le contient(ici c'est l'article) */
+	min-width: 200px; /* on fixe une largeur minimale de 200px (le bloc ne peut pas etre plus petit) */
+	display: flex;/* pour faire la mozaique des images */
+	flex-wrap: wrap;/* pour autoriser le retour à la ligne de la 3e figure */
+	justify-content: space-between;/* pour mettre l'espace libre restant entre les figures */
+	margin-right: 15px;
+	
+}
+
+div figure{
+	
+	display: block; 
+	width: 48%; 
+	margin-bottom: 8px;
+}
+
+article h1{
+	text-align: center;
+	font-size: 2rem;
+	font-weight: bold;
+	margin-bottom: 15px;
+}
+article.service{
+	
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+  }
+
+}
+article.shop{
+	
+  }
+
+
+footer li{
+	display: inline-block;
+	font-family: Verdana, Arial, sans-serif;
+	font-size: 0.9rem;
+	margin-right: 15px;
+	color: #888;
+	
+}
+/* pour les ecrans plus petits que 800px de large */
+@media screen and (max-width: 800px){
+
+	section article{
+		width: 48%;
+	}
+}
+@media screen and (max-width:680px){
+    nav .onglets {
+        margin-left: 0px;
+        margin-bottom: 20px;
+    }
+    .main .card {
+        margin: 10px;
+    }
+    .main .content .card .right img{
+        height:200px;
+        width: 100%;
+        margin-top: -0px;
+    }
+    .main .content .card{
+        display: block;
+    }
+    footer{
+        padding: 30px;
+    }
+}
+
